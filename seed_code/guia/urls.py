@@ -14,10 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
-from guia import urls as urlsGuia
+from . import views
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include(urlsGuia)),
+urlpatterns=[
+    url(r'^guia/(?P<idc>[0-9]+)/$', views.displayconsejo,
+        views.Guia.as_view(),
+        name = "guia"),
 ]
