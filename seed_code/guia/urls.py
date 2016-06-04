@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from . import views
-
+'''
 urlpatterns=[
-    url(r'^guia/(?P<idc>[0-9]+)/$', views.displayconsejo,
+    url(r'^guia/(?P<idc>[0-9]+)/$', views.Guia.displayconsejo,
         views.Guia.as_view(),
         name = "guia"),
 ]
+'''
