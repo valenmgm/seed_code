@@ -19,5 +19,5 @@ from guia import urls as urlsGuia
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    #url(r'^', include(urlsGuia)),
+    url(r'^', include(urlsGuia)),
 ]
