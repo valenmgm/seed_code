@@ -16,8 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from guia import urls as urlsGuia
+from catalogo import urls as urlsCatalogo
+from detalle_mono import urls as urlsdetalle_mono
+from home import urls as urlsHome
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(urlsGuia)),
+    url(r'^', include(urlsCatalogo)),
+    url(r'^', include(urlsdetalle_mono)),
+    url(r'^', include(urlsHome)),
 ]
