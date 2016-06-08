@@ -37,6 +37,11 @@
                 </span>
               </div>
               <div class="row home-thumbnails_cultivos" style="background-color:#C8EC73">
+                <div>
+                  {% for cultivo in dataDM %}
+                    <a href="{url url_detalle_monografia cultivo.id}">{{cultivo.nombre}}</a>
+
+                </div>
                 <div class="col-xs-6 home-thumbnails_cultivos">
                   <a href="#" class="thumbnail">
                     <img src="img/cebolla.png" alt="...">
