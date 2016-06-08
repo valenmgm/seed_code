@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def viewGuiaTecnica(request, idg):
     dataGuia = models.GuiaTecnica.get(pk = idg)
-    return render(request, 'url_guia_tecnica', {'data':dataGuia})
+    return render(request, 'guia_tecnica.html', {'data':dataGuia})

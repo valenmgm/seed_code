@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def viewDetalleMonografia(request, idm):
     dataDetalle = models.DetalleMonografia.get(pk = idm)
-    return render(request, 'url_detalle_monografia', {'data':dataDetalle})
+    return render(request, 'detalle_monografia.html', {'data':dataDetalle})
