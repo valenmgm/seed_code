@@ -16,9 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from guia_tecnica import viewsGT
+from detalle_monografia import viewsDM
+from menus import viewsM
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', views.viewHome name='view_home'),
-    url(r'^detalle_monografia/(?P<idm>[0-9]+)/$', views.viewDetalleMonografia, name="url_detalle_monografia"),
-    url(r'^guia_tecnica/(?P<idg>[0-9]+)/$', views.viewGuiaCultivo, name="url_guia_tecnica"),
+    url(r'^home/', viewsM.viewHome, name='view_home'),
+    url(r'^detalle_monografia/(?P<idm>[0-9]+)/$', viewsDM.viewDetalleMonografia, name="url_detalle_monografia"),
+    url(r'^guia_tecnica/(?P<idg>[0-9]+)/$', viewsGT.viewGuiaTecnica, name="url_guia_tecnica"),
 ]
